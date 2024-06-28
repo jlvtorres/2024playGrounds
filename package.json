@@ -1,0 +1,20 @@
+{
+      "name": "basicexpressapp",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1",
+            "devHomeStart": "cross-env NODE_ENV=home nodemon app.js"
+      },
+      "author": "",
+      "license": "ISC",
+      "dependencies": {
+            "body-parser": "^1.20.2",
+            "cross-env": "^7.0.3",
+            "dotenv": "^16.4.5",
+            "express": "^4.19.2",
+            "nodemon": "^3.1.4",
+            "winston": "^3.13.0"
+      }
+}

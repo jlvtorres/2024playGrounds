@@ -1,0 +1,9 @@
+node_modules/
+*.pdf
+iisnode/
+terminationConfirmationImages/*
+!terminationConfirmationImages/blank.jpg
+!terminationConfirmationImages/blank1.jpg
+logFiles/
+pdfFiles/
+pdfFiles/!emptyFile.txt
