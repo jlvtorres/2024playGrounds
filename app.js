@@ -7,10 +7,15 @@ const logger = require("./services/logger");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/t1", (req, res) => {
-      logger.debug("testing logger");
-      res.send("Your goood");
+const testing = require("./routes/tests");
+app.use("/", testing);
+
+app.get("/t2", (req, res, next) => {
+      const error = new Error("Naaa daaag");
+      next(error);
+      res.send("Nixce");
 });
+
 const port = process.env.SERVER_PORT;
 app.listen(port, () => {
       console.log(`server running on port ${port} at http://localhost:${port}/`);

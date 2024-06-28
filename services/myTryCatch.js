@@ -2,11 +2,11 @@
 //use it in the route handlers and that way they look cleaner
 const myTryCatch = (routeFunction) => async (req, res, next) => {
       try {
-            await routeFunction(req, res, next);
+            await routeFunction(req, res);
       } catch (error) {
             next(error);
             return;
       }
 };
 
-module.exports = { myTryCatch };
+module.exports = myTryCatch;

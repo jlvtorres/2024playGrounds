@@ -8,18 +8,14 @@ function createDirForLogFiles(directoryPath) {
       if (!fs.existsSync(directoryPath)) {
             // Create the directory
             fs.mkdirSync(directoryPath, { recursive: true });
-            console.log(`Directory created: ${directoryPath}`);
+            console.log(`logFiles directory created: ${directoryPath}`);
       } else {
-            console.log(`Directory already exists: ${directoryPath}`);
+            console.log(`logFiles directory already exists: ${directoryPath}`);
       }
 }
 const rootFolder = path.join(__dirname, "../");
 const folderNameToHoldLogs = "logFiles";
 const fullPathToFolder = path.join(rootFolder, folderNameToHoldLogs);
-
-console.log(rootFolder);
-
-console.log(fullPathToFolder);
 
 createDirForLogFiles(fullPathToFolder);
 
