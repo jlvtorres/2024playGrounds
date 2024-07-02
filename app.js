@@ -4,6 +4,8 @@ require("dotenv").config({ path: envPath });
 const bodyParser = require("body-parser");
 const express = require("express");
 const logger = require("./services/logger");
+const errorHandler = require("./services/errorHandler");
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -15,6 +17,7 @@ app.get("/t2", (req, res, next) => {
       next(error);
       res.send("Nixce");
 });
+app.use(errorHandler);
 
 const port = process.env.SERVER_PORT;
 app.listen(port, () => {
