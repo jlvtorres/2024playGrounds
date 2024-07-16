@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Timepicker Example</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- jQuery Timepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <label for="time">Select Time:</label>
+    <input type="text" id="time">
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('#time').timepicker({
+        timeFormat: 'h:mm p', // Format of the time
+        interval: 30, // Interval of the minutes
+        minTime: '10', // Minimum time
+        maxTime: '11:00pm', // Maximum time
+        defaultTime: '0', // Default time
+        startTime: '12:00', // Start time
+        dynamic: false, // Dynamically update the time
+        dropdown: true, // Use a dropdown
+        scrollbar: true // Use a scrollbar
+      });
+    });
+
+  </script>
+</body>
+
+</html>

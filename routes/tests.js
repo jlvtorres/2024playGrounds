@@ -10,17 +10,6 @@ const router = express.Router();
 const getUser = () => undefined;
 
 //router.use(fake);
-router.get(
-      "/",
-      myTryCatch(async (req, res, next) => {
-            const user = getUser();
-            if (!user) {
-                  throw new AppError(MISSING_DATA, `There is no user dog (user=${user})`, 400);
-            }
-
-            return res.status(200).json({ success: true });
-      })
-);
 
 router.get(
       "/s1",
